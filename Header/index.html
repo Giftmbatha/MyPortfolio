@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="mediaqueries/mediaqueries.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'><link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+
+<body>
+    
+        <nav id="desktop-nav">
+           <div class="logo"> 
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div> 
+            <img src="img/moon.png" id="icon" alt="">
+        </nav>
+
+        <nav id="hamburger-nav">
+            <div class="logo"> 
+                <h2 class="logo">Portfo<span>lio</span></h2>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu-links">
+                    <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+                </div>
+            </div>
+            <img src="img/moon.png" id="icon" alt="">
+        </nav>
+
+        <section id="home">
+            <div class="info">
+                <h1>I'm <span>Gift</span> Mbatha</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa<br> repellendus fugiat dignissimos
+                    minima dolores?</p><br>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2" onclick="window.open('')">
+                            Download CV
+                        </button>
+                        <button class="btn btn-color-1" onclick="location.href ='./#contact'">
+                            Contact Info
+                        </button><br>
+                    </div>
+                    <div id="socials-container">
+                        <ul class="wrapper">
+                            <li class="icon github">
+                             <span class="tooltip">Github</span>
+                             <span><i class="fab fa-github"></i></span>
+                            </li>
+                            <li class="icon linked-in">
+                             <span class="tooltip">Linked-in</span>
+                             <span><i class="fab fa-linkedin"></i></span>
+                            </li>
+                            <li class="icon facebook">
+                              <span class="tooltip">Facebook</span>
+                              <span><i class="fab fa-facebook-f"></i></span>
+                            </li>
+                            <li class="icon twitter">
+                              <span class="tooltip">Twitter</span>
+                              <span><i class="fab fa-x-twitter"></i></span>
+                            </li>
+                            <li class="icon instagram">
+                              <span class="tooltip">Instagram</span>
+                              <span><i class="fab fa-instagram"></i></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="img/pattern.png" class="back-img">
+                <img src="img/Mee.png" class="main-img">
+            </div>
+        </section>
+        
+        <section id="about">
+            
+             <div><p class="section__text__p1"> Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="img/Gift.jpg" 
+                    alt="profile picture"
+                    class="about-pic"
+                    />
+                </div>
+
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-containers">
+                            <img 
+                            src="img/project.svg" 
+                            alt="Experience icon" 
+                            class="icons"
+                            />
+                            <h3>Experience</h3>
+                            <p><a>I am Graduate <br> Full Stack Developer</a></p> 
+                        </div>
+                        <div class="details-containers">
+                            <img 
+                            src="img/community.svg" 
+                            alt="Education icon" 
+                            class="icons"
+                            />
+                            <h3>Education</h3>
+                            <p><a>Diploma In ICT<br>Software Development</p></a><br>
+                        </div>
+                    </div>
+                        <div>
+                            <h3><a>Why Choose Me?</a></h3><br>
+                        <p class="info1">
+                            🚀 Passion for Excellence: I thrive on challenges and am driven by a relentless pursuit of excellence. Each project I undertake is an opportunity to push the boundaries and surpass expectations.<br>
+                            
+                            💡 Creative Problem Solver: I love solving puzzles, and coding is my favorite puzzle-solving playground.<br>
+                            
+                            🌐 Full-Stack Expertise: Proficient in a variety of technologies, I am a versatile full-stack developer comfortable navigating both front-end and back-end landscapes.<br>
+                            
+                            👨‍💻 Continuous Learner: I am committed to continuous learning, always seeking out opportunities to expand my skill set and stay ahead of the curve.<br>
+                        </p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            <img src="img/scroll.svg" alt="Arrow icon" class="arrow" onclick="location.href = './#experience'">
+        </section>
+
+        <section id="experience">
+            <div><p class="section__text__p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-containers">
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>CSS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Java</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Bootstrap</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>React</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+
+                                <article>
+                                    <img 
+                                    src="img/check.png" 
+                                    alt="Experience icon" 
+                                    class="icons"
+                                    />
+                                    <div>
+                                        <h3>Javascript</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </article>
+                            
+                        </div>
+                    </div>
+                    <div class="details-containers">
+                        <h2 class="experience-sub-title">Backend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>MySQL</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Node.js</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Next.js</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Git</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>Github</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img 
+                                src="img/check.png" 
+                                alt="Experience icon" 
+                                class="icons"
+                                />
+                                <div>
+                                    <h3>PHP</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <img src="img/scroll.svg" alt="Arrow icon" class="arrow" onclick="location.href = './#projects'">
+        </section>
+
+        <section id="projects">
+            <p class="section__text__p1">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                <div class="details-containers color-container">
+                    <div class="article-container">
+                        <img 
+                        src="img/product-pic-1.jpg" 
+                        alt="Project 1 Image" 
+                        class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-subtitle project-title">Project One</h2>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Live Demo
+                    </button>
+                </div>
+
+                <div class="details-containers color-container">
+                    <div class="article-container">
+                        <img 
+                        src="img/product-pic-2.jpg" 
+                        alt="Project 2 Image" 
+                        class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-subtitle project-title">Project Two</h2>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Live Demo
+                    </button>
+                </div>
+
+                <div class="details-containers color-container">
+                    <div class="article-container">
+                        <img 
+                        src="img/desc-pic-3.jpg" 
+                        alt="Project 3 Image" 
+                        class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-subtitle project-title">Project Three</h2>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://gitbub.com'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            </div>
+            <img src="img/scroll.svg" alt="scroll_icon" class="arrow" onclick="location.href = './#contact'">
+        </section>
+
+        <section id="contact">
+            <p class="section__text__p1"> Get In Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img 
+                    src="img/email.svg" 
+                    alt="Email-icon" 
+                    class="icon conatct-info"
+                    />
+                    <p><a href="mailto:giftmbatha077@gmail.com">giftmbatha077@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img 
+                    src="img/phone.svg" 
+                    alt="Phone-icon" 
+                    class="icon conatct-info"
+                    />
+                    <p> <a>+27 61 646 2293</a></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                       
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2023. Gift Mbatha All Rights Reserved </p>
+        </footer>
+
+
+    <script>
+
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "img/sun.png";
+            } else (
+                icon.src = "img/moon.png"
+            )
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
