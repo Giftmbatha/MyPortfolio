@@ -3,5 +3,6 @@
   "editor.suggestFontSize": 18,
   "cSpell.language": "en,en-GB,en-US",
   "cSpell.enableFiletypes": ["sql"],
-  "cSpell.words": ["Mbatha"]
+  "cSpell.words": ["Mbatha"],
+  "gitConfigUser.selectedProfile": "Projects"
 }
