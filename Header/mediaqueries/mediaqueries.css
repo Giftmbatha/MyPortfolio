@@ -1,9 +1,19 @@
+/* General Styles */
+#desktop-nav {
+    display: flex; /* or block, depending on your layout */
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+/* Media Query */
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
     }
 
     #hamburger-nav {
-        display: flex;
+        display: flex; /* or block, depending on your layout */
     }
 }
