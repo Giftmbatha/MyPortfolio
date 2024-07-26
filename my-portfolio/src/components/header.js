@@ -6,7 +6,11 @@ const Header = () => {
       <div className="n-wrapper"> 
       <div className="n-left">
         <div className="n-name">Portfo<span>lio</span></div>
-        <span>toggle</span>
+        <label class="switch">
+    <input type="checkbox"></input>
+    <span class="slider"></span>
+    
+</label>
         </div>
         
          <div className='n-right'>

@@ -2,40 +2,29 @@ import React from "react";
 import "../about.css"
 import myImage from "../img/img/Gift.jpg"
 import Arrow from "../img/img/icons8-double-down-32.png"
+import Info from "./info";
 
 
 
 
 const About = () =>{
       return(
-            <div id="About">
+  <div className="about-section" id="About">
 
             {/*left side */}
-           <div className="section-header">
+  <div className="section-header">
     <p className="section-subtitle">Get To Know More</p>
     <h1 className="section-title">About Me</h1>
   </div>
-  <div className="section-content">
-    <div className="image-container">
+
+  <div className="about-container container grid">
+    
       <img src={myImage} alt="" className="profile-picture" />
-    </div>
-    <span>
+    
+    <div className="about-data">
+        <Info/>
 
-    </span>
-    <div className="details-container">
-
-    {/* right side */}
-      <div className="detail-item">
-        <img src={""} alt="" className="icon" />
-        <h3>Experience</h3>
-        <p>I am a Graduate Full-Stack Developer</p>
-      </div>
-      <div className="detail-item">
-        <img src="img/community.svg" alt="" className="icon" />
-        <h3>Education</h3>
-        <p>Diploma In ICT - Software Development</p>
-      </div>
-      <div className="info">
+      <div className="about-description">
         <h3>Why Choose Me?</h3>
         <p>🚀 Passion for Excellence: I thrive on challenges and am driven by a relentless pursuit of excellence. Each project I undertake is an opportunity to push the boundaries and surpass expectations.</p>
         <p>💡 Creative Problem Solver: I love solving puzzles, and coding is my favorite puzzle-solving playground.</p>
@@ -51,7 +40,7 @@ const About = () =>{
     onClick={() => { window.location.href = './#experience'; }}
   />
 
-            </div>
+    </div>
       )
 }
 export default About;

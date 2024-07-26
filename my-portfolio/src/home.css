@@ -1,6 +1,7 @@
 /*Intro*/
 .intro{
-      padding:0.5rem 3.5rem;
+      padding: 60px;;
+      left: 55%;
       display: flex;
       height: 77vh;
       margin-top: 6rem;
@@ -80,7 +81,7 @@
 .i-right img{
       height: 100%;
     position: absolute;
-    left: 50%;
+    left: 35%;
     bottom: 0;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
