@@ -11,7 +11,10 @@ const Home = () => {
       <div className="i-name">
             <span>Gift</span>
             <span>Mbatha</span>
-            <span>Software Developer</span>
+            <span>Aspiring Software Developer</span>
+            <span>Welcome to my portfolio! I'm a passionate student developer with a keen interest in building</span>
+        <span>innovative and efficient software solutions. Dive in to see my projects, skills, and journey in the world</span>
+        <span>of technology.</span>
       </div>
 
       <div className="button-container">

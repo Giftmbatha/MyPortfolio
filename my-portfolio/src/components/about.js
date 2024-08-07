@@ -20,19 +20,20 @@ const About = () =>{
   <div className="about-container container grid">
     
       <img src={myImage} alt="" className="profile-picture" />
+    </div>
     
     <div className="about-data">
         <Info/>
+    </div>
 
-      <div className="about-description">
+    <div className="about-description">
         <h3>Why Choose Me?</h3>
         <p>🚀 Passion for Excellence: I thrive on challenges and am driven by a relentless pursuit of excellence. Each project I undertake is an opportunity to push the boundaries and surpass expectations.</p>
         <p>💡 Creative Problem Solver: I love solving puzzles, and coding is my favorite puzzle-solving playground.</p>
         <p>🌐 Full-Stack Expertise: Proficient in a variety of technologies, I am a versatile full-stack developer comfortable navigating both front-end and back-end landscapes.</p>
         <p>👨‍💻 Continuous Learner: I am committed to continuous learning, always seeking out opportunities to expand my skill set and stay ahead of the curve.</p>
       </div>
-    </div>
-  </div>
+  
   <img
     src={Arrow}
     alt="Arrow icon"
