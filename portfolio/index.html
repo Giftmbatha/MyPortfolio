@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Mbatha - Software Developer Portfolio</title>
+    <meta name="description" content="Gift Mbatha - Software Developer specializing in React.js, Node.js, and full-stack development. Based in Pretoria, South Africa.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#E8C999',
+                        'secondary': '#594100',
+                        'background': '#FFFDF6',
+                        'dark-bg': '#1A1A1A',
+                        'dark-surface': '#2D2D2D',
+                        'dark-text': '#E5E5E5'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+                        'fade-in': 'fade-in 0.8s ease-out forwards',
+                        'slide-up': 'slide-up 0.8s ease-out forwards',
+                        'scale-in': 'scale-in 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'bounce-subtle': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        'scale-in': {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                    }
+                }
+            },
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="font-inter bg-background dark:bg-dark-bg text-secondary dark:text-dark-text transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-morphism">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">
+                    Gift Mbatha
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#education" class="hover:text-primary transition-colors duration-300">Education</a>
+                    <a href="#projects" class="hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary hover:bg-opacity-20 transition-colors duration-300">
+                        <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-full hover:bg-primary hover:bg-opacity-20 transition-colors duration-300">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-primary border-opacity-20">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#education" class="hover:text-primary transition-colors duration-300">Education</a>
+                    <a href="#projects" class="hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 section-enter-active">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 dark:opacity-10">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full animate-float"></div>
+            <div class="absolute bottom-20 right-20 w-24 h-24 bg-secondary rounded-full animate-bounce-subtle"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary rounded-full animate-float" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- Profile Image -->
+                <div class="mb-8 animate-scale-in">
+                    <div class="relative inline-block">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary shadow-2xl mx-auto">
+                            <img src="images/profile.jpg" alt="Gift Mbatha - Software Developer" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-secondary">
+                            <i data-lucide="code" class="w-8 h-8"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intro Text -->
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+                        Gift Mbatha
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-secondary dark:text-dark-text opacity-80">
+                        Software Developer & Problem Solver
+                    </p>
+                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Passionate about building innovative software solutions that make a difference. 
+                        Currently pursuing an Advanced Diploma in ICT: Application Development.
+                    </p>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style="animation-delay: 0.4s;">
+                    <a href="#projects" class="px-8 py-3 bg-primary hover:bg-opacity-90 text-secondary rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-secondary rounded-full font-semibold transition-all duration-300 hover:scale-105">
+                        Get In Touch
+                    </a>
+                </div>
+                
+                <!-- Social Links with Tooltips -->
+                <div class="flex justify-center space-x-6 mt-12 animate-fade-in" style="animation-delay: 0.6s;">
+                    <div class="tooltip-trigger relative">
+                        <a href="https://www.linkedin.com/in/gift-mbatha-99561229a/" target="_blank" class="p-3 rounded-full bg-primary bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 hover:scale-110 block">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-primary"></i>
+                        </a>
+                        <div class="tooltip absolute -top-12 left-1/2 transform -translate-x-1/2 bg-secondary text-background px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                            LinkedIn Profile
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="tooltip-trigger relative">
+                        <a href="https://github.com/Giftmbatha" target="_blank" class="p-3 rounded-full bg-primary bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 hover:scale-110 block">
+                            <i data-lucide="github" class="w-6 h-6 text-primary"></i>
+                        </a>
+                        <div class="tooltip absolute -top-12 left-1/2 transform -translate-x-1/2 bg-secondary text-background px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                            GitHub Portfolio
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="tooltip-trigger relative">
+                        <a href="mailto:gift.mbatha@example.com" class="p-3 rounded-full bg-primary bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 hover:scale-110 block">
+                            <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                        </a>
+                        <div class="tooltip absolute -top-12 left-1/2 transform -translate-x-1/2 bg-secondary text-background px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                            Send Email
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-secondary"></div>
+                        </div>
+                    </div>
+                    <div class="tooltip-trigger relative">
+                        <a href="tel:+27719508149" class="p-3 rounded-full bg-primary bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 hover:scale-110 block">
+                            <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                        </a>
+                        <div class="tooltip absolute -top-12 left-1/2 transform -translate-x-1/2 bg-secondary text-background px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                            Call Me
+                            <div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-secondary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative section-enter">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">About Me</h2>
+                <p class="text-xl text-secondary dark:text-dark-text opacity-80">Discover my journey and expertise</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- About Content -->
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">My Story</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Recent graduate with a Diploma in ICT: Application Development, currently pursuing an Advanced Diploma in the same field. I am passionate about building software that solves problems.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            I thrive in collaborative, fast-paced environments where innovation and knowledge-sharing drive success. Adaptable and always eager to learn, I stay current with emerging technologies to continuously improve and add value to development teams.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Location</h3>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                            <span class="text-lg">Pretoria, Gauteng, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skills -->
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Technical Skills</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Programming Languages</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">Java</span>
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">JavaScript</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Frameworks & Libraries</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">React.js</span>
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">Tailwind CSS</span>
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">Node.js</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Database</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">MySQL</span>
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white dark:bg-dark-surface section-enter">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Education</h2>
+                <p class="text-xl text-secondary dark:text-dark-text opacity-80">My academic journey</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary opacity-20"></div>
+                    
+                    <!-- Education Items -->
+                    <div class="space-y-12">
+                        <!-- Current Education -->
+                        <div class="relative flex items-center">
+                            <div class="flex-1 pr-8 text-right">
+                                <div class="bg-background dark:bg-dark-bg rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="flex items-center justify-end mb-2">
+                                        <span class="px-3 py-1 bg-primary text-secondary rounded-full text-sm font-medium">Current</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-2">Advanced Diploma in ICT: Application Development</h3>
+                                    <p class="text-primary font-semibold mb-2">Sol Plaatje University</p>
+                                    <p class="text-sm opacity-70">February 2025 - Present</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-dark-bg"></div>
+                            <div class="flex-1 pl-8"></div>
+                        </div>
+                        
+                        <!-- Completed Diploma -->
+                        <div class="relative flex items-center">
+                            <div class="flex-1 pr-8"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-dark-bg"></div>
+                            <div class="flex-1 pl-8">
+                                <div class="bg-background dark:bg-dark-bg rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div class="flex items-center mb-2">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Completed</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-2">Diploma in ICT: Application Development</h3>
+                                    <p class="text-primary font-semibold mb-2">Sol Plaatje University</p>
+                                    <p class="text-sm opacity-70">February 2022 - December 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- High School -->
+                        <div class="relative flex items-center">
+                            <div class="flex-1 pr-8 text-right">
+                                <div class="bg-background dark:bg-dark-bg rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <h3 class="text-xl font-bold mb-2">National Senior Certificate</h3>
+                                    <p class="text-primary font-semibold mb-2">Tswaing Secondary School</p>
+                                    <p class="text-sm opacity-70 mb-2">January 2017 - December 2020</p>
+                                    <p class="text-sm bg-primary bg-opacity-20 rounded-lg p-2">Matriculated with 1 distinction</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-dark-bg"></div>
+                            <div class="flex-1 pl-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 section-enter">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Featured Projects</h2>
+                <p class="text-xl text-secondary dark:text-dark-text opacity-80">Some of my recent work</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI-Powered Job Portal -->
+                <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-primary to-secondary p-6 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="brain" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute top-4 right-4 px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
+                            Current Project
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">AI-Powered Job Portal</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Full-stack AI-powered job portal being developed as part of my final-year project. Features intelligent job matching and recommendation system.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">SpringBoot</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">FastAPI</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">PostgreSQL</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">In Development</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Library Management System -->
+                <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 p-6 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="book-open" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">Library Management System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Automated platform to manage books for a local library, featuring book tracking, member management, and automated notifications.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">MySQL</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-green-600 font-medium">Completed</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Student Management System -->
+                <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="graduation-cap" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">Student Management System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Full-stack student management system designed and implemented as part of an academic project, featuring student records and grade management.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">HTML</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">MySQL</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-green-600 font-medium">Completed</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-dark-surface section-enter">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
+                <p class="text-xl text-secondary dark:text-dark-text opacity-80">Let's discuss your next project</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-background dark:bg-dark-bg rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-primary">Contact Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:gift.mbatha@example.com" class="text-primary hover:underline">gift.mbatha@example.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Phone</p>
+                                        <a href="tel:+27719508149" class="text-primary hover:underline">071 950 8149</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Location</p>
+                                        <p class="text-secondary dark:text-dark-text opacity-80">Pretoria, Gauteng, South Africa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-background dark:bg-dark-bg rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-primary">Connect With Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/gift-mbatha-99561229a/" target="_blank" class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110">
+                                    <i data-lucide="linkedin" class="w-6 h-6 text-primary"></i>
+                                </a>
+                                <a href="https://github.com/Giftmbatha" target="_blank" class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110">
+                                    <i data-lucide="github" class="w-6 h-6 text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact Actions -->
+                    <div class="space-y-6">
+                        <div class="bg-background dark:bg-dark-bg rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-primary">Quick Actions</h3>
+                            
+                            <div class="space-y-4">
+                                <a href="mailto:gift.mbatha@example.com?subject=Project%20Inquiry&body=Hello%20Gift,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0ARegards" class="flex items-center justify-between p-4 bg-primary bg-opacity-10 rounded-xl hover:bg-opacity-20 transition-all duration-300 group">
+                                    <div class="flex items-center space-x-4">
+                                        <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                                        <div>
+                                            <p class="font-semibold">Send Email</p>
+                                            <p class="text-sm opacity-70">Project inquiry</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </a>
+                                
+                                <a href="tel:+27719508149" class="flex items-center justify-between p-4 bg-primary bg-opacity-10 rounded-xl hover:bg-opacity-20 transition-all duration-300 group">
+                                    <div class="flex items-center space-x-4">
+                                        <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                                        <div>
+                                            <p class="font-semibold">Call Now</p>
+                                            <p class="text-sm opacity-70">Direct consultation</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </a>
+                                
+                                <a href="mailto:gift.mbatha@example.com?subject=Collaboration%20Opportunity&body=Hi%20Gift,%0A%0AI%20have%20a%20collaboration%20opportunity%20I'd%20like%20to%20discuss.%0A%0ABest%20regards" class="flex items-center justify-between p-4 bg-primary bg-opacity-10 rounded-xl hover:bg-opacity-20 transition-all duration-300 group">
+                                    <div class="flex items-center space-x-4">
+                                        <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                                        <div>
+                                            <p class="font-semibold">Collaborate</p>
+                                            <p class="text-sm opacity-70">Partnership inquiry</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-right" class="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-center">
+                            <h3 class="text-2xl font-bold mb-4 text-white">Ready to Start?</h3>
+                            <p class="text-white opacity-90 mb-6">Let's turn your ideas into reality together</p>
+                            <a href="mailto:gift.mbatha@example.com?subject=Let's%20Work%20Together&body=Hello%20Gift,%0A%0AI%20have%20a%20project%20in%20mind%20and%20would%20love%20to%20work%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability.%0A%0AThank%20you!" class="inline-block px-6 py-3 bg-white text-secondary font-semibold rounded-full hover:bg-opacity-90 transition-all duration-300 hover:scale-105">
+                                Start Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-secondary text-background">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">Gift Mbatha</div>
+                <p class="mb-6 opacity-80">Software Developer passionate about creating innovative solutions</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.linkedin.com/in/gift-mbatha-99561229a/" target="_blank" class="hover:text-primary transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/Giftmbatha" target="_blank" class="hover:text-primary transition-colors duration-300">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:gift.mbatha@example.com" class="hover:text-primary transition-colors duration-300">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                    <a href="tel:+27719508149" class="hover:text-primary transition-colors duration-300">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                <div class="border-t border-primary border-opacity-20 pt-6">
+                    <p class="opacity-70">© 2024 Gift Mbatha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
