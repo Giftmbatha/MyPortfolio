@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Gift Mbatha Portfolio</title>
+    <meta name="description" content="This page is under construction. Check back soon!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/custom.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#E8C999',
+                        'secondary': '#594100',
+                        'background': '#FFFDF6',
+                        'dark-bg': '#1A1A1A',
+                        'dark-surface': '#2D2D2D',
+                        'dark-text': '#E5E5E5'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+                        'fade-in': 'fade-in 0.8s ease-out forwards',
+                        'slide-up': 'slide-up 0.8s ease-out forwards',
+                        'scale-in': 'scale-in 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'bounce-subtle': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        'scale-in': {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                    }
+                }
+            },
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="font-inter bg-background dark:bg-dark-bg text-secondary dark:text-dark-text transition-colors duration-300 min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5 dark:opacity-10">
+        <div class="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-secondary rounded-full animate-bounce-subtle"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary rounded-full animate-float" style="animation-delay: 1s;"></div>
+    </div>
+
+    <main class="container mx-auto px-6 text-center relative z-10">
+        <div class="max-w-2xl mx-auto bg-white dark:bg-dark-surface rounded-2xl p-8 md:p-12 shadow-lg glass-morphism animate-fade-in">
+            <i data-lucide="construction" class="w-24 h-24 mx-auto mb-6 text-primary animate-bounce-subtle"></i>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 gradient-text">Coming Soon!</h1>
+            <p class="text-xl md:text-2xl mb-8 text-secondary dark:text-dark-text opacity-80">
+                We're working hard to bring you something amazing. This project page is under construction!
+            </p>
+            <a href="index.html" class="px-8 py-3 bg-primary hover:bg-opacity-90 text-secondary rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                Go Back Home
+            </a>
+        </div>
+    </main>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lucide = window.lucide;
+            if (typeof lucide !== "undefined") {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
