@@ -19,6 +19,9 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/custom.css">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/letter-g.png">
     
     <script>
         tailwind.config = {
@@ -241,6 +244,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">Java</span>
                                     <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">JavaScript</span>
+                                    <span class="px-4 py-2 bg-primary bg-opacity-20 rounded-full text-secondary dark:text-dark-text font-medium hover:bg-opacity-30 transition-colors duration-300">Python</span>
                                 </div>
                             </div>
                             
@@ -344,7 +348,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- AI-Powered Job Portal -->
                 <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary p-6 flex items-center justify-center relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-900 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
                         <i data-lucide="brain" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
                         <div class="absolute top-4 right-4 px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
                             Current Project
@@ -359,9 +363,9 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
                             <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
-                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">SpringBoot</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Material UI</span>
                             <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">FastAPI</span>
-                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">SQLite</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-sm text-primary font-medium">In Development</span>
@@ -386,7 +390,7 @@
                         <h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">Library Management System</h3>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">System Name: Library</p>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Automated platform to manage books for a local library, featuring book tracking, member management, and automated notifications.
+                            Automated platform to manage books for a local library, featuring book tracking and member management.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
@@ -410,7 +414,7 @@
                 
                 <!-- Student Management System -->
                 <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
                         <i data-lucide="graduation-cap" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                     <div class="p-6">
@@ -438,7 +442,76 @@
                         </div>
                     </div>
                 </div>
+                  
+                <!-- Smart Tender -->
+                <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="file" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
+                        <div class="absolute top-4 right-4 px-3 py-1 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
+                            Current Project
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">Tender Insight Hub</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">System Name: Smart Tender</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A Tender Insight Hub, a SaaS platform that is being developed as part of my Software Engineering project. Features document summarization, Search & filter for tenders, and Readiness Check.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">FastAPI</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">PostgreSQL</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">In Development</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/Giftmbatha/SmartTender" target="_blank" class="w-8 h-8 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110" aria-label="View on GitHub">
+                                    <i data-lucide="github" class="w-5 h-5 text-primary"></i>
+                                </a>
+                                <a href="coming-soon.html" target="_blank" class="w-8 h-8 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110" aria-label="View Live Demo (Coming Soon)">
+                                    <i data-lucide="monitor" class="w-5 h-5 text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+
+                    <!-- Food Rescue -->
+                <div class="group bg-white dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-br from-gray-500 to-teal-600 p-6 flex items-center justify-center relative overflow-hidden">
+                        <i data-lucide="leaf" class="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">Food Donation Platform</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">System Name: Food Rescue</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A food donation coordination platform linking supermarkets, restaurants, and NGOs to distribute excess food.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">DaisyUI</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">FastAPI</span>
+                            <span class="px-2 py-1 bg-primary bg-opacity-20 rounded text-xs">SQLite</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-green-600 font-medium">Completed</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/Giftmbatha/food-rescue" target="_blank" class="w-8 h-8 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110" aria-label="View on GitHub">
+                                    <i data-lucide="github" class="w-5 h-5 text-primary"></i>
+                                </a>
+                                <a href="coming-soon.html" target="_blank" class="w-8 h-8 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 hover:scale-110" aria-label="View Live Demo (Coming Soon)">
+                                    <i data-lucide="monitor" class="w-5 h-5 text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            
         </div>
     </section>
 
