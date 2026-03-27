@@ -6,7 +6,7 @@ export function ProfileHeader() {
   return (
     <div className="relative">
       {/* Banner */}
-      <div className="h-32 sm:h-40 md:h-48 rounded-xl overflow-hidden bg-gradient-to-br from-forest-600 via-forest-500 to-forest-700 relative">
+      <div className="h-32 sm:h-40 md:h-48 rounded-xl overflow-hidden bg-linear-to-br from-forest-600 via-forest-500 to-forest-700 relative">
         <div className="absolute inset-0 opacity-20">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>

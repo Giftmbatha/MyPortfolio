@@ -23,7 +23,7 @@ export function ProfileOverview() {
               <Target size={18} className="text-forest-500" />
               <h3 className="font-medium text-foreground text-sm">Current Focus</h3>
             </div>
-            <p className="text-muted-foreground text-sm">API design patterns and database optimization</p>
+            <p className="text-muted-foreground text-sm">API design patterns and databases</p>
           </div>
 
           <div className="p-4 bg-beige-100 rounded-lg border border-beige-200">
@@ -31,7 +31,7 @@ export function ProfileOverview() {
               <BookOpen size={18} className="text-forest-500" />
               <h3 className="font-medium text-foreground text-sm">Learning</h3>
             </div>
-            <p className="text-muted-foreground text-sm">Event-driven architecture and message queues</p>
+            <p className="text-muted-foreground text-sm">System design, microservices, and distributed systems</p>
           </div>
 
           <div className="p-4 bg-beige-100 rounded-lg border border-beige-200">

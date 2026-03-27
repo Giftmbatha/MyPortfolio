@@ -73,9 +73,6 @@ export function Contact() {
 
         {/* Footer */}
         <div className="mt-8 pt-6 border-t border-beige-200 text-center">
-          <p className="text-muted-foreground text-xs">
-            Built with care. No frameworks were harmed in the making of this portfolio.
-          </p>
           <p className="text-muted-foreground text-xs mt-1">© {new Date().getFullYear()} Gift Mbatha</p>
         </div>
       </CardContent>

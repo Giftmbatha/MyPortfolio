@@ -3,15 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 const skillCategories = [
   {
     category: "Backend",
-    skills: ["Python", "Node.js", "Java", "REST APIs", "GraphQL basics"],
+    skills: ["Java", "Node.js", "Python", "REST APIs"],
   },
   {
     category: "Databases",
-    skills: ["PostgreSQL", "MySQL", "Redis", "MongoDB basics", "SQL optimization"],
+    skills: ["PostgreSQL", "MySQL"],
   },
   {
     category: "Tools & Practices",
-    skills: ["Git", "Docker", "Linux CLI", "Testing (pytest, Jest)", "CI/CD basics"],
+    skills: ["Git", "Docker", "Testing (pytest, Jest)", "CI/CD basics"],
   },
 ]
 
