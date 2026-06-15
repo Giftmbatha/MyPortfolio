@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Github, Linkedin, Mail, Terminal } from "lucide-react"
-import profilePic from "../public/profile.jpg"
+import profilePic from "../public/Gift_Mbatha.webp"
 
 export function ProfileHeader() {
   return (
